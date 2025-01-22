@@ -1,4 +1,3 @@
-```yaml
 name: Test Project
 on: push
 
@@ -104,4 +103,3 @@ jobs:
           END_SCRIPT
       - name: Run test file
         run: node test.js
-```
