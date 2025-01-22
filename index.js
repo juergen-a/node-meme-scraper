@@ -46,16 +46,19 @@ function run() {
           })
 
           // Accesing the binary img-data of the response object with the arrayBuffer() method to store the data with Buffer
-          // `/Users/juergen/projects/node-meme-scraper/memes/${fileName}`
           .then(function (arrayBuffer) {
             const buffer = Buffer.from(arrayBuffer);
-            fs.writeFile(`memes/${fileName}`, buffer, (err) => {
-              if (err) {
-                console.error(err);
-              } else {
-                // Response object.value = resolved
-              }
-            });
+            fs.writeFile(
+              `/Users/juergen/projects/node-meme-scraper/memes/${fileName}`,
+              buffer,
+              (err) => {
+                if (err) {
+                  console.error(err);
+                } else {
+                  // Response object.value = resolved
+                }
+              },
+            );
           })
           .catch(function (error) {
             console.log('Error downloading file:', error);
