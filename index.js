@@ -49,7 +49,7 @@ function run() {
           // Accesing the binary img-data of the response object with the arrayBuffer() method to store the data with Buffer
           .then(function (arrayBuffer) {
             const buffer = Buffer.from(arrayBuffer);
-            fs.writeFile(/memes/`${fileName}`, buffer, (err) => {
+            fs.writeFile(`/memes/${fileName}`, buffer, (err) => {
               if (err) {
                 console.error(err);
               } else {
