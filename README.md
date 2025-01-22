@@ -1,45 +1,23 @@
-# Node.js meme-scraper
+# Node.js 'meme-scraper'
 
-## TODOs
+## Description
 
-- [ ] Figure out how to make `memes` "ignored" in Git
-- [ ] Create a `memes` directory
+### The 'meme-scraper' is a little project created during a programming course.
 
-- [ ] Investigate how to access the website
+The goal was, to create a program enabling in a lightweight manner to download images from Websites.
 
-  - [ ] Is "HTTP request" or "fetching" what we want?
+### The downloading procedure can be described as follows:
 
-- [ ] Retrieve the HTML string data from the website and store in a variable
+1. Accessing a website
+2. Fetching images applying the fetch() API
+3. Making use of storing data in a Buffer
+4. Applying file names for the downloaded images
+5. Saving downloaded img-files in a file folder on the local directory
 
-- [ ] Extract the image `src` strings (URLs) in the HTML string (`<img>` elements) to an array of image URLs
+## Modules and libraries
 
-  - [ ] Check whether the image `src` URLs work with the `?width=300`
+- JS DOM
 
-- [ ] Separate out the first 10 image URLs from the array
-- [ ] Loop over first 10 image URLs, and for each of them:
+- Node:FS
 
-  - [ ] Access the image URL
-
-    - [ ] Is "HTTP request" or "fetching" what we want?
-
-  - [ ] Retrieve the image data from the website and store in a variable
-
-  - [ ] Save the the image data to a file
-    - [ ] Create a new file with a name with a 2-digit number, eg. 01.jpg, 02.jpg, ... 10.jpg.
-    - [ ] Add the data
-
-- [ ] Test program to make sure it can run multiple times
-
-Stretch goals:
-
-- [ ] Make the application create your own custom meme (eg. `node index.js hello karl bender` would download an image with the top text of "hello", the bottom text of "karl", with the meme image of Bender)
-- [ ] Add a nice progress indicator (either messages or a progress bar)
-- [ ] Create a version of your program that uses [Deno](https://deno.com/) or [Bun](https://bun.sh/) instead of Node.js
-- [ ] Make your program run on any computer without Node.js or any other runtime installed by creating a [Node.js Single Executable Application](https://nodejs.org/api/single-executable-applications.html), [Deno standalone executable](https://docs.deno.com/runtime/reference/cli/compiler/) or [Bun single-file executable](https://bun.sh/docs/bundler/executables)
-
-## Acceptance Criteria
-
-- [ ] Preflight runs through without errors in your project
-  - [ ] Link in your GitHub repo's About section: Replit demo
-- [ ] [Drone bot](https://learn.upleveled.io/pern-extensive-immersive/modules/cheatsheet-tasks/#upleveled-drone) has been tagged and responded with a passing message
-- [ ] Correct GitHub commit message format (see [Writing Commit Messages](https://learn.upleveled.io/pern-extensive-immersive/modules/cheatsheet-git-github/#writing-commit-messages))
+* node-fetch
